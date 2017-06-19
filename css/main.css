@@ -1,0 +1,66 @@
+[ng\:cloak],[ng-cloak],.ng-cloak {
+  display: none;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+#header-main .main_nav {
+  border-radius: 0;
+  border: 0 none;
+  margin: 0;
+}
+#main {
+  min-height: 100%;
+  background-image: url("../pic/groovepaper.png");
+}
+.search_field {
+	min-width: 300px;
+}
+.movie_panel .panel-title {
+  font-size: 16px;
+  overflow: hidden;
+  height: 36px;
+}
+.movie_panel img {
+  width: 100%;
+}
+.movie_panel .panel-heading, .movie_panel .panel-body {
+  padding: 0;
+}
+.movie_panel .panel-heading a, .movie_panel .panel-body a {
+  padding: 10px 15px;
+  display: block;
+  line-height: 22px;
+}
+.movie_panel:hover a {
+  background-color: white;
+  text-decoration: underline;
+}
+.movie_article_page {
+	margin-top: 30px;
+}
+.movie_article_page .panel-title {
+  font-size: 21px;
+  height: auto;
+}
+.gold_star {
+	color: gold;
+	margin: 3px;
+}
+.genres {
+	margin: 20px 0 10px;
+}
+.genres button {
+	margin: 5px;
+}
+.genre_btn {
+	margin: 5px 5px 0 0;
+}
+textarea#text_edit {
+	width: 100%;
+	padding: 5px !important;
+}

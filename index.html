@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="imdbApp" ng-cloak>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>imdb app</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- // Header -->
+<header id="header-main">
+  <nav class="navbar navbar-inverse main_nav">
+    <div class="container">
+      <!-- Brand logo -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Imdb app</a>
+      </div>
+
+      <!-- Search field -->
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control search_field" placeholder="Search" ng-model="searchFilter">
+        </div>
+      </form>
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+<!-- /. Header -->
+
+<!-- // main -->
+<main id="main">
+  <div class="container">
+    <div class="row">
+        <div ng-view></div>
+    </div>
+  </div>
+</main>
+
+<!-- // script includes -->
+<script href="js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<!-- /. script includes -->
+
+<script src="app.js"></script>
+<script src="homePage/homeController.js"></script>
+<script src="moviePage/moviePageController.js"></script>
+
+<script src="services/dbService.js"></script>
+<script src="filters/tagsFilter.js"></script>
+</body>
+</html>

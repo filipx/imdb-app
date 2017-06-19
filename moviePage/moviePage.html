@@ -1,0 +1,36 @@
+<article class="movie_article_page">
+	<div class="col-sm-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+					{{movies[id].title}} <small><em>({{movies[id].status}}: {{movies[id].release_date | date}}.)</em></small>
+				</h3>
+      </div>
+      <div class="panel-body text-center">
+        <img ng-src="images{{movies[id].poster_path}}" alt="{{movies[id].title}}" class="img-thumbnail img-responsive">
+				<br>
+				<div class="genres">
+					<button class="btn btn-info" ng-repeat="genre in movies[id].genres">{{genre.name}}</button>
+				</div>
+      </div>
+      <div class="panel-footer">
+				<h3>Overview</h3>
+				<p ng-show="editMode">{{movies[id].overview}}</p>
+				<textarea id="text_edit" type="text" ng-hide="editMode" rows="4">{{movies[id].overview}}</textarea>
+				<button class="btn-link" ng-click="textEditToggle()">Edit</button>
+				<!-- <button class="btn-link" ng-click="textSave()">Save</button> -->
+
+				<div class="rating">
+					<h3>Rating: {{ movies[id].vote_average }} <span class="glyphicon glyphicon-star gold_star" ng-repeat="star in stars"></span></h3>
+				</div>
+				<div class="duration">
+					<h4>Duration: {{ movies[id].runtime }} minutes.</h4>
+				</div>
+      </div>
+    </div>
+	</div>
+
+	<div class="col-sm-4">
+		<a href="#/" class="btn btn-default btn-block">&laquo;&laquo; Back</a>
+	</div>
+</article>

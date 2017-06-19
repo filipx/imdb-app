@@ -1,0 +1,32 @@
+<div class="col-sm-12">
+	<h1>{{heading}}</h1>
+	<hr>
+</div>
+
+<div class="col-sm-9">
+  <article class="movie_panel" ng-repeat="movie in movies | filter : tagFilter"> <!-- filter : { title : searchFilter } -->
+    <div class="col-xs-6 col-sm-4 col-lg-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+						<a href="#/moviePage/{{ $index }}">{{movie.title}}</a>
+					</h3>
+        </div>
+        <div class="panel-body">
+          <a href="#/moviePage/{{ $index }}"> <!-- {{ movie.id }} -->
+            <img ng-src="images{{movie.poster_path}}" alt="{{movie.title}}" class="img-thumbnail img-responsive">
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+
+<aside class="main_aside col-sm-3">
+	<article class="genre_cloud">
+		<h3>Filter by Genre</h3>
+		<div>
+			<button class="btn btn-sm btn-default genre_btn" type="button" name="button" ng-repeat="genre in genres" ng-click="tags(genre)">{{genre}}</button>
+		</div>
+	</article>
+</aside>
